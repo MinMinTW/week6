@@ -1,0 +1,99 @@
+.theme-card{
+    border-radius: 20px 0 20px 0;
+    overflow: hidden;
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #212529, $alpha: 0.4);
+        position: absolute;
+        opacity: 0;
+    }
+    &:hover::before{
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+.hito-content{
+    position: relative;
+    &::before{
+        content:"";
+        position: absolute;
+        left:0;
+        bottom:0;
+        display: block;
+        width: 217px;
+        height: 76px;
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024-week6/bg-1.png?raw=true");
+    }
+    &::after{
+        content:"";
+        position: absolute;
+        right: -20px;
+        bottom:0;
+        display: block;
+        width: 300px;
+        height: 196px;
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024-week6/bg-2.png?raw=true");
+    }
+}
+@media (max-width: 992px) {
+    .hito-content{
+        overflow: hidden;
+        &::before{
+            display: none;
+        }
+        &::after{
+            content:"";
+            position: absolute;
+            right: -40px;
+            bottom:0;
+            display: block;
+            width: 160px;
+            height: 104px;
+            background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024-week6/bg-2-sm.png?raw=true");
+        }
+    }
+  }
+.list-group-item {
+    background-color: transparent;
+    &:hover{
+        cursor: pointer;
+    }
+  }
+.list-group-item.active{
+    background: #E0EFDE;
+    color: #212529;
+}
+.hots-height{
+    height: 637px; //再想想
+}
+.hots-list-first{
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+}
+@media (max-width: 992px){
+    .hots-height{
+        height: auto;
+    }
+    .hots-list-first{
+        border-radius: 0;
+    }
+}
+.hots-list-last{
+    border-radius:0 20px 20px 0;
+    overflow: hidden;
+}
+.fs-52{
+    font-size: 52px;
+}
+@media (max-width: 992px){
+    .fs-52{
+        font-size: 40px;
+    }
+}
+.fs-12{
+    font-size: 12px;
+}
